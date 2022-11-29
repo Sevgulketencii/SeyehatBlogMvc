@@ -1,0 +1,11 @@
+﻿@model TravelMvc.Models.Sınıflar.BlogYorum
+<div class="content-form">
+    <h3>Bir yorum yapın</h3>
+    <form action="BlogDetay" method="post">
+        <input type="hidden" name="blogId" value=@ViewBag.id  readonly/>
+        <input asp-action type="text" placeholder="Adınız" required name="KullaniciAdi" />
+        <input type="text" placeholder="Email adresiniz" name="Mail" required />
+        <textarea placeholder="Yorumunuz" name="Aciklama"></textarea>
+        <button action="submit">gönder</button>
+    </form>
+</div>

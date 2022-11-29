@@ -1,0 +1,174 @@
+﻿@model  TravelMvc.Models.Sınıflar.BlogYorum
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Anasayfa</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="css/slider.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
+
+    <script>
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            // Slideshow 1
+            $("#slider1").responsiveSlides({
+                auto: true,
+                nav: true,
+                speed: 500,
+                namespace: "callbacks",
+            });
+        });
+    </script>
+</head>
+<body>
+   
+  
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot">Tatil & Seyehat Bloğum</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Restaurantlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Uçuşlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Yapılabilecek Şeyler</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Araba Kiralama</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider" style="width:650px;height:380px">
+                            <ul class="rslides" id="slider1">
+                                @foreach (var item in Model.deger1)
+                                {
+                                    <li><img src=@item.BlogImg alt=""></li>
+
+                                }
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Tatil Seyehat Sitemize Hoşgeldiniz</h3>
+                    <p>Bu sitede gezilip görülecek yerlerden bahsedeceğiz. Bu site bir Mvc5 projesi olup dinamik bir sitedir.
+                    Kendi oluşturduğum ilk web sayfasıdır. Umarım sitemi beğenirsiniz. Sağlıklı günler</p>
+                </div>
+                @Html.Partial("_Partial")               
+                <div class="grids">
+                    <div class="box1">
+                        <div class="padding">
+                            <h4>En Popüler 10 Blog</h4>
+                            <ul class="list list-pad">
+                                 
+                                @foreach (var item in Model.deger1)
+                                {
+                                    
+                                    <li class="list-bg"><span>-</span><a href="#">@item.Baslik</a></li>
+                                }
+
+                             
+                            </ul>
+                            <a href="/Blog/Blog" class="link1">Tüm Blogları Oku</a>
+                        </div>
+                        <div class="padding1">
+                            <h4>Our Best Places</h4>
+                            <div class="box-left">
+                                <div class="bot-img">
+                                    <img src="~/images/pic3.jpg" alt="" />
+                                </div>
+                                <div class="bot-desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bot-img">
+                                    <img src="~/images/pic7.jpg" alt="" />
+                                </div>
+                                <div class="bot-desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bot-img">
+                                    <img src="~/images/pic8.jpg" alt="" />
+                                </div>
+                                <div class="bot-desc">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                            <div class="box1-left">
+                                <div class="bot-img">
+                                    <img src="~/images/pic9.jpg" alt="" />
+                                </div>
+                                <div class="bot-desc1">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bot-img">
+                                    <img src="~/images/pic10.jpg" alt="" />
+                                </div>
+                                <div class="bot-desc1">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="bot-img">
+                                    <img src="~/images/pic3.jpg" alt="" />
+                                </div>
+                                <div class="bot-desc1">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

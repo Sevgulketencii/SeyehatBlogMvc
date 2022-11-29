@@ -1,0 +1,29 @@
+﻿@model List<Hakkımızda>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Hakkımızda</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="~/css/style.css" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="~/css/slider.css" rel="stylesheet" type="text/css" media="all" />
+</head>
+<body>
+   
+    <div class="content">
+        <div class="wrap">
+            <div class="about">
+                @foreach (var item in Model)
+                {
+                    <h3>@item.Baslik</h3>
+                    <img src=@item.Hakkımızdaİmg alt=""class="center" />
+                    <p>@item.Aciklama</p>
+                }
+
+
+            </div>
+        </div>
+    </div>
+ 
+</body>
+</html>

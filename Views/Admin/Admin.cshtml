@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "AdminLayout";
+}
+@model List<Blog>
+<br />
+<div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Blog ID</th>
+                <th>Blog BAŞLIK</th>
+                <th>Sil/th>
+                <th>Güncelle</th>
+                <th>Detaylar</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Baslik</td>
+                    <td><a asp-action="BlogSil" asp-route-id=@item.Id class="btn btn-danger">Sil</a></td>
+                    <td><a asp-action="BlogGüncelle" asp-route-id=@item.Id class="btn btn-success">Güncelle</a></td>
+                    <td><a href="#"class="btn btn-warning">Detaylar</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="BlogEkle" class="btn btn-info">Yeni Blog</a>
+
+</div>

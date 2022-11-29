@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = "AdminLayout"; 
+}
+@model Blog
+<div>
+    <br />
+    <form action="BlogGüncelle" method="post">
+        <input type="hidden" name="Id" value=@ViewBag.id readonly />
+        <label>Başlık</label>
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" }) <br />
+        <label>Tarih</label>
+        @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" }) <br />
+        <label>Açıklama</label>
+        @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" }) <br />
+        <label>Blog Img</label>
+        @Html.TextBoxFor(x => x.BlogImg, new { @class = "form-control" }) <br />
+
+        <button action="submit" class="btn btn-success">Güncelle</button>
+    </form>
+</div>

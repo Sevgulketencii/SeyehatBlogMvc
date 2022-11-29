@@ -1,0 +1,36 @@
+﻿
+@{
+    Layout = "AdminLayout";
+}
+@model List<Yorum>
+<br />
+<div>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Yorum ID</th>
+                <th>Yorum Kullanıcı Adı</th>
+                <th>Yorum Mail</th>
+                <th>Yorum</th>
+                <th>Yorum Yapılan Blog</th>
+                <th>Sil</th>
+                <th>Güncelle</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.KullaniciAdi</td>
+                    <td>@item.Mail</td>
+                    <td>@item.Aciklama</td>
+                    <td>@item.blogId</td>
+                    <td><a asp-action="YorumSil" asp-route-id=@item.Id class="btn btn-danger">Sil</a></td>
+                    <td><a href="#" class="btn btn-success">Güncelle</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <a href="YorumEkle" class="btn btn-info">Ekle</a>
+</div>

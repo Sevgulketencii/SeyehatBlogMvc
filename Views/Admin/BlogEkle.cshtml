@@ -1,0 +1,25 @@
+﻿@model Blog
+@{
+    Layout = "AdminLayout";
+}
+<br />
+<div>
+    <form action="BlogEkle" method="post">
+
+        <label>Blog Başlık</label>
+        @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" }) <br />
+
+        <label>Blog Tarih</label>
+        @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" }) <br />
+
+        <label>Blog Açıklama</label>
+        @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control " }) <br />
+
+        <label>Blog Img Url</label>
+        @Html.TextBoxFor(x => x.BlogImg, new { @class = "form-control" }) <br />
+
+        <button action="submit" class="btn btn-success">Ekle</button>
+        <a href="/Admin/Admin" class="btn btn-warning">Geri</a>
+    </form>
+
+</div>
